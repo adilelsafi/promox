@@ -28,7 +28,9 @@
       mode: 0755
       owner: root
       group: root 
-
+  - name: install zabbix agent
+    package:
+      name: zabbix-agent
 - hosts: all
   become: true
   tasks:

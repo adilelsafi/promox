@@ -1,7 +1,14 @@
 - hosts: all
   become: true
   tasks:
- 
+  - name: Copy SSh key | copying shh key to remote host
+    authorized_key:
+      user: "adil"
+      state: present
+      key: "{{ lookup('file', item) }}"
+    with_fileglob:
+    - id_dsa.pub
+   
   - name: install updates (CentOS)
     dnf:
       update_only: yes

@@ -42,7 +42,6 @@
       key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBng8YFQAm+B1wCyL9jMmQomWqaGztuA59Pl0yykZR35 ansible"
 
 
-
 - hosts: web_servers
   become: true
   tasks:
